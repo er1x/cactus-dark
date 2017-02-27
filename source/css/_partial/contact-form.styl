@@ -1,0 +1,28 @@
+.contact-form
+  input, textarea
+    margin-bottom 1em
+    font-size 14px
+    font-family "Menlo", "Meslo LG", monospace
+    font-weight 400
+    line-height 1.725
+    text-rendering geometricPrecision
+  &__block
+    display flex
+    justify-content space-between
+  &__name, &__email
+    display block
+    flex-grow 1
+  &__email
+    margin-left 1em
+  &__message
+    width 100%
+    display block
+  &__submit
+    display block
+  @media (max-width: 480px)
+    &__block
+      display block
+    &__name, &__email
+      width 100%
+      margin-left 0
+  
