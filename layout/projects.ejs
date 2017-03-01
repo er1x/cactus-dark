@@ -1,7 +1,16 @@
 <div class="projects-page">
     <% site.data.projects.forEach(function (project) { %>
-      <article class="projects-page__project">
-        <%= project.name %>
+      <article class="projects-page__project" style="background-image: url(<%= project.image %>);">
+        <div class="project-data">
+          <a href="<%= project.url %>" class="project-data__title">
+            <%= project.name%>
+          </a>
+          <p class="project-data__description"><%= project.desc %></p>
+          <% if (project.private) {%>
+          <p class="project-data__private">[private]</p>
+          <% } %>
+          <p class="project-data__tags"><%= project.tags%></p>
+        </div>
       </article>
     <% }); %>
 </div>
