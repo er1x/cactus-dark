@@ -1,6 +1,9 @@
 .projects-page {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   &__project {
-    width: 100%;
+    width: 45%;
     height: 250px;
     overflow: hidden;
     margin-bottom: 1em;
@@ -33,6 +36,15 @@
       &:hover {
         opacity: 1;
       }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-page {
+    display: block;
+    &__project {
+      width: 100%;
     }
   }
 }
